@@ -12,7 +12,7 @@ interface UserDAO {
 
     @Insert
     suspend fun insertUser(user: User): Long
-    
+
     @Update
     suspend fun updateUser(user: User)
 
