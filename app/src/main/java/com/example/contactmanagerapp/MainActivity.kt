@@ -7,8 +7,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.contactmanagerapp.ViewModel.UserViewModel
-import com.example.contactmanagerapp.ViewModel.UserViewModelFactory
+import com.example.contactmanagerapp.viewModel.UserViewModel
+import com.example.contactmanagerapp.viewModel.UserViewModelFactory
 import com.example.contactmanagerapp.databinding.ActivityMainBinding
 import com.example.contactmanagerapp.room.User
 import com.example.contactmanagerapp.room.UserDatabase
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         val factory = UserViewModelFactory(repository)
 
         userViewModel = ViewModelProvider(this, factory)
-                            .get(userViewModel::class.java)
+                            .get(UserViewModel::class.java)
 
         binding.userViewModel = userViewModel
         binding.lifecycleOwner = this

@@ -1,4 +1,4 @@
-package com.example.contactmanagerapp.ViewModel
+package com.example.contactmanagerapp.viewModel
 
 
 import androidx.databinding.Bindable

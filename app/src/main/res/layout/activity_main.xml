@@ -6,7 +6,7 @@
     <data>
         <variable
             name="userViewModel"
-            type="com.example.contactmanagerapp.ViewModel.UserViewModel" />
+            type="com.example.contactmanagerapp.viewModel.UserViewModel" />
     </data>
 
 
@@ -19,7 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint2"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="180dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -27,7 +27,7 @@
             <EditText
                 android:id="@+id/nameET"
                 android:layout_width="160dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginStart="36dp"
                 android:layout_marginTop="16dp"
                 android:hint="Enter your name"
@@ -38,7 +38,7 @@
             <EditText
                 android:id="@+id/emailET"
                 android:layout_width="160dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginStart="36dp"
                 android:layout_marginTop="88dp"
                 android:hint="Enter your email"
@@ -52,8 +52,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="68dp"
                 android:layout_marginBottom="11dp"
-                android:text="@={userViewModel.saveOrUpdate}"
-                android:onClick="@={()->userViewModel.saveOrUpdate()}"
+                android:text="@={userViewModel.saveOrUpdateButtonText}"
+                android:onClick="@{()->userViewModel.saveOrUpdate()}"
                 app:layout_constraintBottom_toTopOf="@+id/btn2"
                 app:layout_constraintStart_toEndOf="@+id/nameET"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -64,8 +64,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="68dp"
                 android:layout_marginBottom="4dp"
-                android:text="@={userViewModel.clearAllOrDelete}"
-                android:onClick="@={()->userViewModel.clearAllOrDelete()}"
+                android:text="@={userViewModel.clearAllOrDeleteButtonText}"
+                android:onClick="@{()->userViewModel.clearAllOrDelete()}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/emailET"
                 app:layout_constraintTop_toBottomOf="@+id/btn1" />
@@ -76,13 +76,9 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraint2"
-            tools:layout_editor_absoluteX="0dp">
-
-
-        </androidx.recyclerview.widget.RecyclerView>
+            app:layout_constraintTop_toBottomOf="@+id/constraint2" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
