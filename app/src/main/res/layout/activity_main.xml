@@ -52,7 +52,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="68dp"
                 android:layout_marginBottom="11dp"
-                android:text="Save"
+                android:text="@={userViewModel.saveOrUpdate}"
+                android:onClick="@={()->userViewModel.saveOrUpdate()}"
                 app:layout_constraintBottom_toTopOf="@+id/btn2"
                 app:layout_constraintStart_toEndOf="@+id/nameET"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -63,7 +64,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="68dp"
                 android:layout_marginBottom="4dp"
-                android:text="Delete All"
+                android:text="@={userViewModel.clearAllOrDelete}"
+                android:onClick="@={()->userViewModel.clearAllOrDelete()}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/emailET"
                 app:layout_constraintTop_toBottomOf="@+id/btn1" />
